@@ -1,0 +1,14 @@
+Changes
+MANIFEST
+MANIFEST.SKIP
+SIGNATURE
+Makefile.PL
+README
+lib/WebService/Wikimapia.pm
+t/00-load.t
+t/01-new.t
+t/02-search.t
+t/03-box.t
+t/04-object.t
+t/manifest.t
+t/pod.t
