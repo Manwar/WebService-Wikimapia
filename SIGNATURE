@@ -15,26 +15,36 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 118d41c3c82f21de6f3a39a94be0024d6bdee580 Changes
-SHA1 d7ec6af4035560434f07513dff7bde81257d7449 MANIFEST
+SHA1 e3211932b0d0acbaddc3d94a2887f633c6c97902 MANIFEST
 SHA1 5f29cdcbfacb9c46ac155fff9844aceeb064aef1 MANIFEST.SKIP
-SHA1 bf1cca072a991266f0d448f5f2ef251173887d04 Makefile.PL
-SHA1 d798e6ba22a3f3a3bb2d3ca7ff0fa4768f7e5908 README
-SHA1 3edcb2e1af9d854509cf481dd5c5964ace349719 lib/WebService/Wikimapia.pm
-SHA1 8c021c9ef479938493f4efcdbe7e23b33aeee0a8 t/00-load.t
-SHA1 47969cd77f13af777a41ee1206674dde04948d67 t/01-new.t
-SHA1 b508effd9cf772cc875618adf01cbf70bdac94cb t/02-search.t
-SHA1 80b35a050598d926075fab52a41906a2f540385e t/03-box.t
-SHA1 d5703eeb6694120364ddea92e788851af7679f4c t/04-object.t
+SHA1 8442538af6603da703525b58d89d7a6648deb87f Makefile.PL
+SHA1 21a00f1fd7757ae06defa6601d530fe423005e30 README
+SHA1 aa4091d70899ad93a4bb2756cd067a9eafb25cf9 lib/WebService/Wikimapia.pm
+SHA1 d6a8737e1a84339f5b6f093720845090ffdd22ec lib/WebService/Wikimapia/Location.pm
+SHA1 c4a29183d01accd1e49fba9e75b899f56c40b952 lib/WebService/Wikimapia/Object.pm
+SHA1 637e339e5de4b7d709b4216b2d11cdb8413bb768 lib/WebService/Wikimapia/Params.pm
+SHA1 702fb83717c305a3822ed8605a604bfc7cd48127 lib/WebService/Wikimapia/Place.pm
+SHA1 73ad36d41e50070ebb73abc5dd8de92b80ec475a lib/WebService/Wikimapia/Polygon.pm
+SHA1 0f37dcfa57577b915be9ab14bcd54e08eb48c44f lib/WebService/Wikimapia/Response.pm
+SHA1 8b06ce91b0999b6d56ae4bc1b1ba7facda7ec6fd lib/WebService/Wikimapia/Result.pm
+SHA1 d1c491ab1eaa44afc94087170ffb0851d7371f4c lib/WebService/Wikimapia/Tag.pm
+SHA1 4618ca0caecb50af1feb8be7235c2a96a12c6ce6 lib/WebService/Wikimapia/UserAgent.pm
+SHA1 51ce2877f91047e547dcdd1dadbc4ec44b799265 lib/WebService/Wikimapia/UserAgent/Exception.pm
+SHA1 db9c6f40dc0be502dd830fb3cce786cd80849506 t/00-load.t
+SHA1 1a72b445d2f6bc7aeb09f72a8d48f21ac10d7660 t/01-new.t
+SHA1 4ca20a32b58182a9a5bf6d73ac8a2ff9141b1c30 t/02-search.t
+SHA1 f56c0552cbb4b5b908b53f1a9a1d8c8ecca95b57 t/03-box.t
+SHA1 54409f19f8022dcdd5c128dfc01549dc6f1a7f28 t/04-object.t
 SHA1 2b8ffb7e4f399af95d092743846ac8d438f2c53e t/manifest.t
 SHA1 0765c9ff0cc4319f415bb08d0053b7717a8284a2 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJULynEAAoJENoXJXWo7C/pyG0H/jq83O4BBUrI/oyAIwtkhcAC
-k53kQxcemDRlYFnQYbMlx0ctaoPsBL1fYvuJNSnMs6S25uu+ybj2Imefz2rAnp1C
-PWgYtGEepReufbDKHQbvUtd9O2iiGv/mHrHnsAnTKtoht7bA1mh2vPiodNZ+Jq42
-QnT+Mn92mcrzltKk0QefmBrV+SrnfGX5MvVKDhq+bbzJDiaLk5QBdkzKvA/sjQUv
-hvSw1o2kFkRVSHiuk3T1lq7LE7LTRjE7QHiNL8TTqJ1dhrkta95c0J0a1+ayX4lZ
-dcsC64ZGVVY/t4gwNE9/o6pT+C0hn8IvM1x74bBWaJ8NFTXRt4oBhySSD/x4RhA=
-=IRBv
+iQEcBAEBAgAGBQJUMdL4AAoJENoXJXWo7C/pSvQIAKqqyh6nZsIP0ypIn6xIzYBZ
+uW72jTlwkhwrtq5+1XL88Dw32R0tIJZYUWKRc1511Ti7F9EOda+6B5Nuh3eoT144
+32gnac/LTm0PwTsjbxKAjAl3kmwWv1zRRXsviCP2iK2N9IwRP3ZzwZOUyKP4oxG8
+J5DfYw/bNkyVpR/pjjwsEksWOHgOYHlmZcjFA397706aF3Neb/OM7JdqgHXto0s2
+FWZul5xPR7J7vl9VJ66KcnNlLp8cNo9msbrZj4Jr9KIgSMJxCF4lgcG2VpBIcYDm
+53biM0kvqw+8l9cP8fEJrMHMCiTiXTJ532CPY0Ts//JvSMIrfF7SgDcz3z1a6Ec=
+=35rp
 -----END PGP SIGNATURE-----

@@ -5,6 +5,16 @@ SIGNATURE
 Makefile.PL
 README
 lib/WebService/Wikimapia.pm
+lib/WebService/Wikimapia/Params.pm
+lib/WebService/Wikimapia/Result.pm
+lib/WebService/Wikimapia/Response.pm
+lib/WebService/Wikimapia/Place.pm
+lib/WebService/Wikimapia/Polygon.pm
+lib/WebService/Wikimapia/Tag.pm
+lib/WebService/Wikimapia/Object.pm
+lib/WebService/Wikimapia/Location.pm
+lib/WebService/Wikimapia/UserAgent.pm
+lib/WebService/Wikimapia/UserAgent/Exception.pm
 t/00-load.t
 t/01-new.t
 t/02-search.t
