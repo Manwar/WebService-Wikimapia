@@ -14,23 +14,33 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 118d41c3c82f21de6f3a39a94be0024d6bdee580 Changes
-SHA1 e3211932b0d0acbaddc3d94a2887f633c6c97902 MANIFEST
+SHA1 ab9a5e59a4823de0d5f28235a9f9c5b8bb12d90e Changes
+SHA1 f4c4d287c14f9103f0cf95bfa3567d90c51a7bf8 MANIFEST
 SHA1 5f29cdcbfacb9c46ac155fff9844aceeb064aef1 MANIFEST.SKIP
-SHA1 8442538af6603da703525b58d89d7a6648deb87f Makefile.PL
+SHA1 6694f3c07541b8aad2690e41431113db0d9d43d4 Makefile.PL
 SHA1 21a00f1fd7757ae06defa6601d530fe423005e30 README
-SHA1 aa4091d70899ad93a4bb2756cd067a9eafb25cf9 lib/WebService/Wikimapia.pm
-SHA1 d6a8737e1a84339f5b6f093720845090ffdd22ec lib/WebService/Wikimapia/Location.pm
-SHA1 c4a29183d01accd1e49fba9e75b899f56c40b952 lib/WebService/Wikimapia/Object.pm
-SHA1 637e339e5de4b7d709b4216b2d11cdb8413bb768 lib/WebService/Wikimapia/Params.pm
-SHA1 702fb83717c305a3822ed8605a604bfc7cd48127 lib/WebService/Wikimapia/Place.pm
-SHA1 73ad36d41e50070ebb73abc5dd8de92b80ec475a lib/WebService/Wikimapia/Polygon.pm
-SHA1 0f37dcfa57577b915be9ab14bcd54e08eb48c44f lib/WebService/Wikimapia/Response.pm
-SHA1 8b06ce91b0999b6d56ae4bc1b1ba7facda7ec6fd lib/WebService/Wikimapia/Result.pm
+SHA1 2f0870d9d708363d751dc866910d2e487a5cf6ac lib/WebService/Wikimapia.pm
+SHA1 5f5634191ea26bc83d80a2a9988d3485b048a548 lib/WebService/Wikimapia/Category.pm
+SHA1 622e51e59525d57a44333c82da431676b65d1ce0 lib/WebService/Wikimapia/Category/Synonym.pm
+SHA1 ac1a66a699ab6bffa326429bc7e5f5ec2bbab53d lib/WebService/Wikimapia/City.pm
+SHA1 63cf254f33d24258e270abbe045fea19d79b922c lib/WebService/Wikimapia/Comment.pm
+SHA1 b3804f29f320fd7fac47f35202324f6c3a1e08f8 lib/WebService/Wikimapia/GlobalAdmin.pm
+SHA1 469459238b7306ebbc6256d077de56fb307fc1a1 lib/WebService/Wikimapia/Hotel.pm
+SHA1 fd5e0a682a4d31bd0dfa5c98815b124e8917a377 lib/WebService/Wikimapia/Language.pm
+SHA1 32719b8f9be12205ea54310bd4b90b506b1b0c1f lib/WebService/Wikimapia/Location.pm
+SHA1 dd3b9f50fccc7c1e9f2d5e472b44fccaac6b4d5f lib/WebService/Wikimapia/Object.pm
+SHA1 57ee024d8e22a568da1ad4ba07b0a6efce8deb67 lib/WebService/Wikimapia/Params.pm
+SHA1 00308ab4eafd1562b77fc8aab30506cf5965fac4 lib/WebService/Wikimapia/Photo.pm
+SHA1 39592616f3b71184b2419c8df01bc4eca48a3b55 lib/WebService/Wikimapia/Place.pm
+SHA1 6fdd85bf6a0d24138450eab25a6e56cf88b3ef28 lib/WebService/Wikimapia/Polygon.pm
+SHA1 9c498d0c2c1ddc2d4de0bf48adabdfa77f4e8a60 lib/WebService/Wikimapia/Response.pm
+SHA1 00202a45f7954aefb046672e8f5c543f564f8a07 lib/WebService/Wikimapia/Result.pm
+SHA1 a2ba36242b2cad8cf997ed796597f427a12ff557 lib/WebService/Wikimapia/Street.pm
 SHA1 d1c491ab1eaa44afc94087170ffb0851d7371f4c lib/WebService/Wikimapia/Tag.pm
+SHA1 8ff6522c47f58683e6594ee9cffc252a1541fafe lib/WebService/Wikimapia/User.pm
 SHA1 4618ca0caecb50af1feb8be7235c2a96a12c6ce6 lib/WebService/Wikimapia/UserAgent.pm
 SHA1 51ce2877f91047e547dcdd1dadbc4ec44b799265 lib/WebService/Wikimapia/UserAgent/Exception.pm
-SHA1 db9c6f40dc0be502dd830fb3cce786cd80849506 t/00-load.t
+SHA1 e5091ffe765a93dad1ee53c415cf5ab8d2967850 t/00-load.t
 SHA1 1a72b445d2f6bc7aeb09f72a8d48f21ac10d7660 t/01-new.t
 SHA1 4ca20a32b58182a9a5bf6d73ac8a2ff9141b1c30 t/02-search.t
 SHA1 f56c0552cbb4b5b908b53f1a9a1d8c8ecca95b57 t/03-box.t
@@ -40,11 +50,11 @@ SHA1 0765c9ff0cc4319f415bb08d0053b7717a8284a2 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJUMdL4AAoJENoXJXWo7C/pSvQIAKqqyh6nZsIP0ypIn6xIzYBZ
-uW72jTlwkhwrtq5+1XL88Dw32R0tIJZYUWKRc1511Ti7F9EOda+6B5Nuh3eoT144
-32gnac/LTm0PwTsjbxKAjAl3kmwWv1zRRXsviCP2iK2N9IwRP3ZzwZOUyKP4oxG8
-J5DfYw/bNkyVpR/pjjwsEksWOHgOYHlmZcjFA397706aF3Neb/OM7JdqgHXto0s2
-FWZul5xPR7J7vl9VJ66KcnNlLp8cNo9msbrZj4Jr9KIgSMJxCF4lgcG2VpBIcYDm
-53biM0kvqw+8l9cP8fEJrMHMCiTiXTJ532CPY0Ts//JvSMIrfF7SgDcz3z1a6Ec=
-=35rp
+iQEcBAEBAgAGBQJUOuBiAAoJENoXJXWo7C/pfycH/0FmpHVzOERB36dlNic5Gn6f
+ZVoAL0a7LtU/m+3kYEmXjqBrWYsvGPY6fgaHuRYc9thmAhqnczSzQ7uQJiOFoQWR
+E6RtSjrpMbx7XNCBLFXuRciFrN2JlHhoCm2X6JhnRpm2UIOCk1U2yPsndT118mFH
+DHG1uaawDTYJH+n+NpQsEdURrQC0pPcnRtLo7rSMB1qtTpuiBjADkduItJXvGXCo
+tDw5xA3K4t4eL/RjtJx7xppPnjWuuqMzEEM9Syu268uUvPBkpkzOgvccPK3D1JWB
+rNsJvGhrYj86ayHooswJMxKPHGKQhsXIOCG4Zw8t5EA3nEkn2rdvK12JwFEEDZA=
+=zA8L
 -----END PGP SIGNATURE-----

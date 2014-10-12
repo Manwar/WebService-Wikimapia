@@ -21,8 +21,6 @@ use namespace::clean;
 has 'x' => (is => 'ro');
 has 'y' => (is => 'ro');
 
-=head1 DESCRIPTION
-
 =head1 METHODS
 
 =head2 x()

@@ -61,17 +61,45 @@ sub BUILDARGS {
     return $args;
 }
 
-=head1 DESCRIPTION
-
 =head1 METHODS
 
-=head2 page()
+=head2 id()
 
-=head2 found()
+=head2 title()
 
-=head2 count()
+=head2 description()
 
-=head2 places()
+=head2 x()
+
+=head2 y()
+
+=head2 h()
+
+=head2 polygon_x()
+
+=head2 polygon_y()
+
+=head2 city_id()
+
+=head2 country_adm_id()
+
+=head2 house_no()
+
+=head2 pl()
+
+=head2 zoom()
+
+=head2 yc()
+
+=head2 wikipedia()
+
+=head2 urlForTemplate()
+
+=head2 polygon()
+
+=head2 tags()
+
+=head2 location()
 
 =head1 AUTHOR
 

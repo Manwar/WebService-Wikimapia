@@ -1,10 +1,10 @@
-package WebService::Wikimapia::Place;
+package WebService::Wikimapia::Street;
 
-$WebService::Wikimapia::Place::VERSION = '0.05';
+$WebService::Wikimapia::Street::VERSION = '0.05';
 
 =head1 NAME
 
-WebService::Wikimapia::Place - Placeholder for 'place' of L<WebService::Wikimapia>.
+WebService::Wikimapia::Street - Placeholder for 'street' of L<WebService::Wikimapia>.
 
 =head1 VERSION
 
@@ -14,41 +14,66 @@ Version 0.05
 
 use 5.006;
 use Data::Dumper;
-use WebService::Wikimapia::Tag;
+use WebService::Wikimapia::City;
+use WebService::Wikimapia::Hotel;
 use WebService::Wikimapia::Photo;
+use WebService::Wikimapia::Place;
+use WebService::Wikimapia::User;
 use WebService::Wikimapia::Comment;
-use WebService::Wikimapia::Polygon;
 use WebService::Wikimapia::Location;
+use WebService::Wikimapia::Language;
 
 use Moo;
 use namespace::clean;
 
 has 'id'                 => (is => 'ro');
 has 'title'              => (is => 'ro');
-has 'language_id'        => (is => 'ro');
-has 'language_name'      => (is => 'ro');
-has 'language_iso'       => (is => 'ro');
-has 'url'                => (is => 'ro');
-has 'urlhtml'            => (is => 'ro');
-has 'lon'                => (is => 'ro');
-has 'lat'                => (is => 'ro');
-has 'distance'           => (is => 'ro');
-has 'tags'               => (is => 'ro');
-has 'polygon'            => (is => 'ro');
-has 'location'           => (is => 'ro');
 has 'photos'             => (is => 'ro');
+has 'language_id'        => (is => 'ro');
+has 'language_iso'       => (is => 'ro');
+has 'urlhtml'            => (is => 'ro');
+has 'object_type'        => (is => 'ro');
+has 'location'           => (is => 'ro');
 has 'comments'           => (is => 'ro');
-has 'availableLanguages' => (is => 'ro');
-has 'contributedUsers'   => (is => 'ro');
-has 'nearestComments'    => (is => 'ro');
 has 'lastEditors'        => (is => 'ro');
-has 'similarPlaces'      => (is => 'ro');
+has 'related'            => (is => 'ro');
 has 'nearestPlaces'      => (is => 'ro');
+has 'nearestComments'    => (is => 'ro');
 has 'nearestHotels'      => (is => 'ro');
 has 'nearestCities'      => (is => 'ro');
+has 'nearestStreets'     => (is => 'ro');
+has 'availableLanguages' => (is => 'ro');
 
 sub BUILDARGS {
     my ($class, $args) = @_;
+
+    if (exists $args->{'location'}) {
+        $args->{'location'} = WebService::Wikimapia::Location->new($args->{'location'});
+    }
+
+    if (exists $args->{'comments'}) {
+        my $comments = [];
+        foreach my $comment (@{$args->{'comments'}}) {
+            push @$comments, WebService::Wikimapia::Comment->new($comment);
+        }
+        $args->{'comments'} = $comments;
+    }
+
+    if (exists $args->{'lastEditors'}) {
+        my $editors = [];
+        foreach my $id (keys %{$args->{'lastEditors'}}) {
+            push @$editors, WebService::Wikimapia::User->new($args->{'lastEditors'}->{$id});
+        }
+        $args->{'lastEditors'} = $editors;
+    }
+
+    if (exists $args->{'related'}) {
+        my $places = [];
+        foreach my $id (keys %{$args->{'related'}}) {
+            push @$places, WebService::Wikimapia::Place->new($args->{'related'}->{$id});
+        }
+        $args->{'related'} = $places;
+    }
 
     if (exists $args->{'nearestPlaces'}) {
         my $places = [];
@@ -56,14 +81,6 @@ sub BUILDARGS {
             push @$places, WebService::Wikimapia::Place->new($args->{'nearestPlaces'}->{$id});
         }
         $args->{'nearestPlaces'} = $places;
-    }
-
-    if (exists $args->{'similarPlaces'}) {
-        my $places = [];
-        foreach my $id (keys %{$args->{'similarPlaces'}}) {
-            push @$places, WebService::Wikimapia::Place->new($args->{'similarPlaces'}->{$id});
-        }
-        $args->{'similarPlaces'} = $places;
     }
 
     if (exists $args->{'nearestComments'}) {
@@ -90,36 +107,20 @@ sub BUILDARGS {
         $args->{'nearestCities'} = $cities;
     }
 
+    if (exists $args->{'nearestStreets'}) {
+        my $cities = [];
+        foreach my $id (keys %{$args->{'nearestStreets'}}) {
+            push @$cities, WebService::Wikimapia::City->new($args->{'nearestStreets'}->{$id});
+        }
+        $args->{'nearestStreets'} = $cities;
+    }
+
     if (exists $args->{'availableLanguages'}) {
         my $languages = [];
         foreach my $id (keys %{$args->{'availableLanguages'}}) {
             push @$languages, WebService::Wikimapia::Language->new($args->{'availableLanguages'}->{$id});
         }
         $args->{'availableLanguages'} = $languages;
-    }
-
-    if (exists $args->{'lastEditors'}) {
-        my $editors = [];
-        foreach my $id (keys %{$args->{'lastEditors'}}) {
-            push @$editors, WebService::Wikimapia::User->new($args->{'lastEditors'}->{$id});
-        }
-        $args->{'lastEditors'} = $editors;
-    }
-
-    if (exists $args->{'contributedUsers'}) {
-        my $users = [];
-        foreach my $user (@{$args->{'contributedUsers'}}) {
-            push @$users, WebService::Wikimapia::User->new($user);
-        }
-        $args->{'contributedUsers'} = $users;
-    }
-
-    if (exists $args->{'tags'}) {
-        my $tags = [];
-        foreach my $tag (@{$args->{'tags'}}) {
-            push @$tags, WebService::Wikimapia::Tag->new($tag);
-        }
-        $args->{'tags'} = $tags;
     }
 
     if (exists $args->{'photos'}) {
@@ -130,26 +131,6 @@ sub BUILDARGS {
         $args->{'photos'} = $photos;
     }
 
-    if (exists $args->{'comments'}) {
-        my $comments = [];
-        foreach my $comment (@{$args->{'comments'}}) {
-            push @$comments, WebService::Wikimapia::Comment->new($comment);
-        }
-        $args->{'comments'} = $comments;
-    }
-
-    if (exists $args->{'polygon'}) {
-        my $polygons = [];
-        foreach my $polygon (@{$args->{'polygon'}}) {
-            push @$polygons, WebService::Wikimapia::Polygon->new($polygon);
-        }
-        $args->{'polygon'}  = $polygons;
-    }
-
-    if (exists $args->{'location'}) {
-        $args->{'location'} = WebService::Wikimapia::Location->new($args->{'location'});
-    }
-
     return $args;
 }
 
@@ -157,49 +138,67 @@ sub BUILDARGS {
 
 =head2 id()
 
+Returns the id of the street.
+
 =head2 title()
 
-=head2 language_id()
-
-=head2 language_name()
-
-=head2 language_iso()
-
-=head2 url()
-
-=head2 urlhtml()
-
-=head2 lon()
-
-=head2 lat()
-
-=head2 distance()
-
-=head2 tags()
-
-=head2 polygon()
-
-=head2 location()
+Returns the title of the street.
 
 =head2 photos()
 
+Returns the reference to the list of objects of type L<WebService::Wikimapia::Photo>.
+
+=head2 language_id()
+
+Returns the language id.
+
+=head2 language_iso()
+
+Returns the language iso.
+
+=head2 urlhtml()
+
+Returns the URL.
+
+=head2 object_type()
+
+Returns the object type.
+
+=head2 location()
+
+Returns an object of type L<WebService::Wikimapia::Location>.
+
 =head2 comments()
 
-=head2 availableLanguages()
-
-=head2 contributedUsers()
-
-=head2 nearestComments()
+Returns the reference to the list of comments.
 
 =head2 lastEditors()
 
-=head2 similarPlaces()
+=head2 related()
 
 =head2 nearestPlaces()
 
+Returns the reference to the list of objects of type L<WebService::Wikimapia::Place>.
+
+=head2 nearestComments()
+
+Returns the reference to the list of objects of type L<WebService::Wikimapia::Comment>.
+
 =head2 nearestHotels()
 
+Returns the reference to the list of objects of type L<WebService::Wikimapia::Hotel>.
+
 =head2 nearestCities()
+
+Returns the reference to the list of objects of type L<WebService::Wikimapia::City>.
+
+=head2 nearestStreets()
+
+Returns the reference to the list of objects of type L<WebService::Wikimapia::NStreet>.
+
+=head2 availableLanguages()
+
+Returns the reference to the list of objects of type L<WebService::Wikimapia::Language>.
 
 =head1 AUTHOR
 

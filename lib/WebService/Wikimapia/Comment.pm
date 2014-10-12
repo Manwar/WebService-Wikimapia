@@ -1,10 +1,10 @@
-package WebService::Wikimapia::Location;
+package WebService::Wikimapia::Comment;
 
-$WebService::Wikimapia::Location::VERSION = '0.05';
+$WebService::Wikimapia::Comment::VERSION = '0.05';
 
 =head1 NAME
 
-WebService::Wikimapia::Location - Placeholder for 'location' of L<WebService::Wikimapia::Response>.
+WebService::Wikimapia::Comment - Placeholder for 'comment' of L<WebService::Wikimapia>.
 
 =head1 VERSION
 
@@ -14,69 +14,57 @@ Version 0.05
 
 use 5.006;
 use Data::Dumper;
-use WebService::Wikimapia::GlobalAdmin;
 
 use Moo;
 use namespace::clean;
 
-has 'east'           => (is => 'ro');
-has 'west'           => (is => 'ro');
-has 'north'          => (is => 'ro');
-has 'south'          => (is => 'ro');
-has 'place'          => (is => 'ro');
-has 'city'           => (is => 'ro');
-has 'city_id'        => (is => 'ro');
-has 'state'          => (is => 'ro');
-has 'country'        => (is => 'ro');
-has 'country_adm_id' => (is => 'ro');
-has 'lat'            => (is => 'ro');
-has 'lon'            => (is => 'ro');
-has 'zoom'           => (is => 'ro');
-has 'gadm'           => (is => 'ro');
-
-sub BUILDARGS {
-    my ($class, $args) = @_;
-
-    if (exists $args->{gadm}) {
-        my $gadms = [];
-        foreach my $gadm (@{$args->{gadm}}) {
-            push @$gadms, WebService::Wikimapia::GlobalAdmin->new($gadm);
-        }
-        $args->{gadm} = $gadms;
-    }
-
-    return $args;
-}
+has 'user_id'    => (is => 'ro');
+has 'name'       => (is => 'ro');
+has 'title'      => (is => 'ro');
+has 'num'        => (is => 'ro');
+has 'url'        => (is => 'ro');
+has 'message'    => (is => 'ro');
+has 'good'       => (is => 'ro');
+has 'bad'        => (is => 'ro');
+has 'place_id'   => (is => 'ro');
+has 'date'       => (is => 'ro');
+has 'lang_id'    => (is => 'ro');
+has 'moder_uid'  => (is => 'ro');
+has 'moder_name' => (is => 'ro');
+has 'user_ip'    => (is => 'ro');
+has 'user_photo' => (is => 'ro');
 
 =head1 METHODS
 
-=head2 east()
+=head2 user_id()
 
-=head2 west()
+=head2 name()
 
-=head2 north()
+=head2 title()
 
-=head2 south()
+=head2 num()
 
-=head2 place()
+=head2 url()
 
-=head2 city()
+=head2 message()
 
-=head2 city_id()
+=head2 good()
 
-=head2 state()
+=head2 bad()
 
-=head2 country()
+=head2 place_id()
 
-=head2 country_adm_id()
+=head2 date()
 
-=head2 lat()
+=head2 lang_id()
 
-=head2 lon()
+=head2 moder_uid()
 
-=head2 zoom()
+=head2 moder_name()
 
-=head2 gadm()
+=head2 user_ip()
+
+=head2 user_photo()
 
 =head1 AUTHOR
 
@@ -97,7 +85,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::Wikimapia::Location
+    perldoc WebService::Wikimapia::Comment
 
 You can also look for information at:
 
@@ -161,4 +149,4 @@ OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of WebService::Wikimapia::Location
+1; # End of WebService::Wikimapia::Comment

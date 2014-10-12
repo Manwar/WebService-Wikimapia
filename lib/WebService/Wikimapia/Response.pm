@@ -28,17 +28,17 @@ has 'places'   => (is => 'ro');
 sub BUILDARGS {
     my ($class, $args) = @_;
 
-    my $places = [];
-    foreach my $place (@{$args->{places}}) {
-        push @$places, WebService::Wikimapia::Place->new($place);
-    }
+    if (exists $args->{'places'}) {
+        my $places = [];
+        foreach my $place (@{$args->{'places'}}) {
+            push @$places, WebService::Wikimapia::Place->new($place);
+        }
 
-    $args->{places} = $places;
+        $args->{'places'} = $places;
+    }
 
     return $args;
 }
-
-=head1 DESCRIPTION
 
 =head1 METHODS
 
@@ -47,6 +47,8 @@ sub BUILDARGS {
 =head2 found()
 
 =head2 count()
+
+=head2 language()
 
 =head2 places()
 

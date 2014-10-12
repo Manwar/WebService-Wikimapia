@@ -1,10 +1,10 @@
-package WebService::Wikimapia::Location;
+package WebService::Wikimapia::Photo;
 
-$WebService::Wikimapia::Location::VERSION = '0.05';
+$WebService::Wikimapia::Photo::VERSION = '0.05';
 
 =head1 NAME
 
-WebService::Wikimapia::Location - Placeholder for 'location' of L<WebService::Wikimapia::Response>.
+WebService::Wikimapia::Photo - Placeholder for 'photo' of L<WebService::Wikimapia::Street>.
 
 =head1 VERSION
 
@@ -14,69 +14,60 @@ Version 0.05
 
 use 5.006;
 use Data::Dumper;
-use WebService::Wikimapia::GlobalAdmin;
 
 use Moo;
 use namespace::clean;
 
-has 'east'           => (is => 'ro');
-has 'west'           => (is => 'ro');
-has 'north'          => (is => 'ro');
-has 'south'          => (is => 'ro');
-has 'place'          => (is => 'ro');
-has 'city'           => (is => 'ro');
-has 'city_id'        => (is => 'ro');
-has 'state'          => (is => 'ro');
-has 'country'        => (is => 'ro');
-has 'country_adm_id' => (is => 'ro');
-has 'lat'            => (is => 'ro');
-has 'lon'            => (is => 'ro');
-has 'zoom'           => (is => 'ro');
-has 'gadm'           => (is => 'ro');
-
-sub BUILDARGS {
-    my ($class, $args) = @_;
-
-    if (exists $args->{gadm}) {
-        my $gadms = [];
-        foreach my $gadm (@{$args->{gadm}}) {
-            push @$gadms, WebService::Wikimapia::GlobalAdmin->new($gadm);
-        }
-        $args->{gadm} = $gadms;
-    }
-
-    return $args;
-}
+has 'id'                  => (is => 'ro');
+has 'user_id'             => (is => 'ro');
+has 'user_name'           => (is => 'ro');
+has 'object_id'           => (is => 'ro');
+has 'last_user_id'        => (is => 'ro');
+has 'last_user_name'      => (is => 'ro');
+has 'size'                => (is => 'ro');
+has 'time'                => (is => 'ro');
+has 'time_str'            => (is => 'ro');
+has 'status'              => (is => 'ro');
+has 'full_url'            => (is => 'ro');
+has 'big_url'             => (is => 'ro');
+has '960_url'             => (is => 'ro');
+has '1280_url'            => (is => 'ro');
+has 'thumbnail_url'       => (is => 'ro');
+has 'thumbnaliRetina_url' => (is => 'ro');
 
 =head1 METHODS
 
-=head2 east()
+=head2 id()
 
-=head2 west()
+=head2 user_id()
 
-=head2 north()
+=head2 user_name()
 
-=head2 south()
+=head2 object_id()
 
-=head2 place()
+=head2 last_user_id()
 
-=head2 city()
+=head2 last_user_name()
 
-=head2 city_id()
+=head2 size()
 
-=head2 state()
+=head2 time()
 
-=head2 country()
+=head2 time_str()
 
-=head2 country_adm_id()
+=head2 status()
 
-=head2 lat()
+=head2 full_url()
 
-=head2 lon()
+=head2 big_url()
 
-=head2 zoom()
+=head2 960_url ()
 
-=head2 gadm()
+=head2 1280_url()
+
+=head2 thumnail_url()
+
+=head2 thumbnailRetina_url()
 
 =head1 AUTHOR
 
@@ -97,7 +88,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::Wikimapia::Location
+    perldoc WebService::Wikimapia::Photo
 
 You can also look for information at:
 
@@ -161,4 +152,4 @@ OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of WebService::Wikimapia::Location
+1; # End of WebService::Wikimapia::Photo

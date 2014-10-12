@@ -1,10 +1,10 @@
-package WebService::Wikimapia::Location;
+package WebService::Wikimapia::Hotel;
 
-$WebService::Wikimapia::Location::VERSION = '0.05';
+$WebService::Wikimapia::Hotel::VERSION = '0.05';
 
 =head1 NAME
 
-WebService::Wikimapia::Location - Placeholder for 'location' of L<WebService::Wikimapia::Response>.
+WebService::Wikimapia::Hotel - Placeholder for 'hotel' of L<WebService::Wikimapia::Street>.
 
 =head1 VERSION
 
@@ -14,69 +14,44 @@ Version 0.05
 
 use 5.006;
 use Data::Dumper;
-use WebService::Wikimapia::GlobalAdmin;
 
 use Moo;
 use namespace::clean;
 
-has 'east'           => (is => 'ro');
-has 'west'           => (is => 'ro');
-has 'north'          => (is => 'ro');
-has 'south'          => (is => 'ro');
-has 'place'          => (is => 'ro');
-has 'city'           => (is => 'ro');
-has 'city_id'        => (is => 'ro');
-has 'state'          => (is => 'ro');
-has 'country'        => (is => 'ro');
-has 'country_adm_id' => (is => 'ro');
-has 'lat'            => (is => 'ro');
-has 'lon'            => (is => 'ro');
-has 'zoom'           => (is => 'ro');
-has 'gadm'           => (is => 'ro');
+has 'name'         => (is => 'ro');
+has 'title'        => (is => 'ro');
+has 'class'        => (is => 'ro');
+has 'currencycode' => (is => 'ro');
+has 'minrate'      => (is => 'ro');
+has 'distance'     => (is => 'ro');
+has 'lon'          => (is => 'ro');
+has 'lat'          => (is => 'ro');
+has 'url'          => (is => 'ro');
+has 'photo_url'    => (is => 'ro');
 
-sub BUILDARGS {
-    my ($class, $args) = @_;
-
-    if (exists $args->{gadm}) {
-        my $gadms = [];
-        foreach my $gadm (@{$args->{gadm}}) {
-            push @$gadms, WebService::Wikimapia::GlobalAdmin->new($gadm);
-        }
-        $args->{gadm} = $gadms;
-    }
-
-    return $args;
-}
+=head1 DESCRIPTION
 
 =head1 METHODS
 
-=head2 east()
+=head2 name()
 
-=head2 west()
+=head2 title()
 
-=head2 north()
+=head2 class()
 
-=head2 south()
+=head2 currencycode()
 
-=head2 place()
+=head2 minrate()
 
-=head2 city()
-
-=head2 city_id()
-
-=head2 state()
-
-=head2 country()
-
-=head2 country_adm_id()
-
-=head2 lat()
+=head2 distance()
 
 =head2 lon()
 
-=head2 zoom()
+=head2 lat()
 
-=head2 gadm()
+=head2 url()
+
+=head2 photo_url()
 
 =head1 AUTHOR
 
@@ -97,7 +72,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::Wikimapia::Location
+    perldoc WebService::Wikimapia::Hotel
 
 You can also look for information at:
 
@@ -161,4 +136,4 @@ OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of WebService::Wikimapia::Location
+1; # End of WebService::Wikimapia::Hotel

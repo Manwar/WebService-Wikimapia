@@ -1,10 +1,10 @@
-package WebService::Wikimapia::Location;
+package WebService::Wikimapia::Category;
 
-$WebService::Wikimapia::Location::VERSION = '0.05';
+$WebService::Wikimapia::Category::VERSION = '0.05';
 
 =head1 NAME
 
-WebService::Wikimapia::Location - Placeholder for 'location' of L<WebService::Wikimapia::Response>.
+WebService::Wikimapia::Category - Placeholder for 'category' of L<WebService::Wikimapia>.
 
 =head1 VERSION
 
@@ -14,35 +14,27 @@ Version 0.05
 
 use 5.006;
 use Data::Dumper;
-use WebService::Wikimapia::GlobalAdmin;
+use WebService::Wikimapia::Category::Synonym;
 
 use Moo;
 use namespace::clean;
 
-has 'east'           => (is => 'ro');
-has 'west'           => (is => 'ro');
-has 'north'          => (is => 'ro');
-has 'south'          => (is => 'ro');
-has 'place'          => (is => 'ro');
-has 'city'           => (is => 'ro');
-has 'city_id'        => (is => 'ro');
-has 'state'          => (is => 'ro');
-has 'country'        => (is => 'ro');
-has 'country_adm_id' => (is => 'ro');
-has 'lat'            => (is => 'ro');
-has 'lon'            => (is => 'ro');
-has 'zoom'           => (is => 'ro');
-has 'gadm'           => (is => 'ro');
+has 'id'          => (is => 'ro');
+has 'name'        => (is => 'ro');
+has 'description' => (is => 'ro');
+has 'amount'      => (is => 'ro');
+has 'icon'        => (is => 'ro');
+has 'synonyms'    => (is => 'ro');
 
 sub BUILDARGS {
     my ($class, $args) = @_;
 
-    if (exists $args->{gadm}) {
-        my $gadms = [];
-        foreach my $gadm (@{$args->{gadm}}) {
-            push @$gadms, WebService::Wikimapia::GlobalAdmin->new($gadm);
+    if (exists $args->{'synonyms'}) {
+        my $synonyms = [];
+        foreach my $synonym (@{$args->{synonyms}}) {
+            push @$synonyms, WebService::Wikimapia::Category::Synonym->new($synonym);
         }
-        $args->{gadm} = $gadms;
+        $args->{'synonyms'} = $synonyms;
     }
 
     return $args;
@@ -50,33 +42,17 @@ sub BUILDARGS {
 
 =head1 METHODS
 
-=head2 east()
+=head2 id()
 
-=head2 west()
+=head2 name()
 
-=head2 north()
+=head2 description()
 
-=head2 south()
+=head2 amount()
 
-=head2 place()
+=head2 icon()
 
-=head2 city()
-
-=head2 city_id()
-
-=head2 state()
-
-=head2 country()
-
-=head2 country_adm_id()
-
-=head2 lat()
-
-=head2 lon()
-
-=head2 zoom()
-
-=head2 gadm()
+=head2 synonyms()
 
 =head1 AUTHOR
 
@@ -97,7 +73,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::Wikimapia::Location
+    perldoc WebService::Wikimapia::Category
 
 You can also look for information at:
 
@@ -161,4 +137,4 @@ OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of WebService::Wikimapia::Location
+1; # End of WebService::Wikimapia::Category

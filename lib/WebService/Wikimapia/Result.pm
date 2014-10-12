@@ -30,29 +30,35 @@ has 'polygon'  => (is => 'ro');
 sub BUILDARGS {
     my ($class, $args) = @_;
 
-    $args->{location} = WebService::Wikimapia::Location->new($args->{location});
-
-    my $polygons = [];
-    foreach my $polygon (@{$args->{polygon}}) {
-        push @$polygons, WebService::Wikimapia::Polygon->new($polygon);
+    if (exists $args->{'location'}) {
+        $args->{'location'} = WebService::Wikimapia::Location->new($args->{'location'});
     }
 
-    $args->{polygon} = $polygons;
+    if (exists $args->{'polygon'}) {
+        my $polygons = [];
+        foreach my $polygon (@{$args->{'polygon'}}) {
+            push @$polygons, WebService::Wikimapia::Polygon->new($polygon);
+        }
+
+        $args->{'polygon'} = $polygons;
+    }
 
     return $args;
 }
 
-=head1 DESCRIPTION
-
 =head1 METHODS
 
-=head2 page()
+=head2 id()
 
-=head2 found()
+=head2 name()
 
-=head2 count()
+=head2 url()
 
-=head2 places()
+=head2 distance()
+
+=head2 location()
+
+=head2 polygon()
 
 =head1 AUTHOR
 
