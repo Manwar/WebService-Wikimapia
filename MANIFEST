@@ -1,7 +1,6 @@
 Changes
 MANIFEST
 MANIFEST.SKIP
-SIGNATURE
 Makefile.PL
 README
 lib/WebService/Wikimapia.pm
@@ -9,7 +8,6 @@ lib/WebService/Wikimapia/Params.pm
 lib/WebService/Wikimapia/Place.pm
 lib/WebService/Wikimapia/City.pm
 lib/WebService/Wikimapia/Street.pm
-lib/WebService/Wikimapia/Language.pm
 lib/WebService/Wikimapia/Hotel.pm
 lib/WebService/Wikimapia/Comment.pm
 lib/WebService/Wikimapia/Photo.pm
