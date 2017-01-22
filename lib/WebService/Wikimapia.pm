@@ -1,6 +1,7 @@
 package WebService::Wikimapia;
 
-$WebService::Wikimapia::VERSION = '0.08';
+$WebService::Wikimapia::VERSION   = '0.09';
+$WebService::Wikimapia::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia - Interface to Wikimapia API.
 
 =head1 VERSION
 
-Version 0.08
+Version 0.09
 
 =cut
 
@@ -734,7 +735,7 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 
 =head1 REPOSITORY
 
-L<https://github.com/Manwar/WebService-Wikimapia>
+L<https://github.com/manwar/WebService-Wikimapia>
 
 =head1 BUGS
 

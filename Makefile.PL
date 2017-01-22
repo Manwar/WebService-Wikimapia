@@ -9,7 +9,6 @@ WriteMakefile(
     VERSION_FROM       => 'lib/WebService/Wikimapia.pm',
     ABSTRACT_FROM      => 'lib/WebService/Wikimapia.pm',
     LICENSE            => 'artistic_2',
-    PL_FILES           => {},
     MIN_PERL_VERSION   => 5.006,
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
@@ -31,8 +30,8 @@ WriteMakefile(
         resources => {
             repository => {
                 type => 'git',
-                url  => 'https://github.com/Manwar/WebService-Wikimapia.git',
-                web  => 'https://github.com/Manwar/WebService-Wikimapia',
+                url  => 'https://github.com/manwar/WebService-Wikimapia.git',
+                web  => 'https://github.com/manwar/WebService-Wikimapia',
             },
         }})
      : ()

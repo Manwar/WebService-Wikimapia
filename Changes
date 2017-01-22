@@ -1,4 +1,8 @@
-Revision history for WebService-Wikimapia
+Revision history for WebService::Wikimapia
+
+0.09  Sun Jan 22 03:15:00 2017
+      - Added LICENSE file.
+      - General tidied up Makefile.PL and t/00-load.t scripts.
 
 0.08  Fri Jan 16 16:05:00 2015
       - Removed the duplicate entry from the MANIFEST file.

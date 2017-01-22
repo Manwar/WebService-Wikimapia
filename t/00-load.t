@@ -1,5 +1,8 @@
-#!perl
+#!/usr/bin/perl
 
+use 5.006;
+use strict;
+use warnings FATAL => 'all';
 use Test::More tests => 19;
 
 BEGIN {
@@ -23,3 +26,5 @@ BEGIN {
     use_ok('WebService::Wikimapia::Object')               || print "Bail out!";
     use_ok('WebService::Wikimapia::Tag')                  || print "Bail out!";
 }
+
+diag( "Testing WebService::Wikimapia $WebService::Wikimapia::VERSION, Perl $], $^X" );
