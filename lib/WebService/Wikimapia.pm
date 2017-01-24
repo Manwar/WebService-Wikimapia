@@ -1,6 +1,6 @@
 package WebService::Wikimapia;
 
-$WebService::Wikimapia::VERSION   = '0.09';
+$WebService::Wikimapia::VERSION   = '0.10';
 $WebService::Wikimapia::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia - Interface to Wikimapia API.
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 

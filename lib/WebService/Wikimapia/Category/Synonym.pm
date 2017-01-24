@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Category::Synonym;
 
-$WebService::Wikimapia::Category::Synonym::VERSION = '0.08';
+$WebService::Wikimapia::Category::Synonym::VERSION   = '0.10';
+$WebService::Wikimapia::Category::Synonym::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Category::Synonym - Placeholder for 'synonym' of L<WebSer
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 

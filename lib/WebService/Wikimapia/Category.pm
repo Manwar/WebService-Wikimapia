@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Category;
 
-$WebService::Wikimapia::Category::VERSION = '0.08';
+$WebService::Wikimapia::Category::VERSION   = '0.10';
+$WebService::Wikimapia::Category::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Category - Placeholder for 'category' of L<WebService::Wi
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 

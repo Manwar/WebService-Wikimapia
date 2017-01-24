@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Place;
 
-$WebService::Wikimapia::Place::VERSION = '0.08';
+$WebService::Wikimapia::Place::VERSION   = '0.10';
+$WebService::Wikimapia::Place::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Place - Placeholder for 'place' of L<WebService::Wikimapi
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 

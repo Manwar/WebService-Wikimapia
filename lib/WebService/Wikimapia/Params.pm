@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Params;
 
-$WebService::Wikimapia::Params::VERSION = '0.08';
+$WebService::Wikimapia::Params::VERSION   = '0.10';
+$WebService::Wikimapia::Params::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Params - Placeholder for parameters for WebService::Wikim
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 

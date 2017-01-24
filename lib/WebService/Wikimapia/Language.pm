@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Language;
 
-$WebService::Wikimapia::Langauge::VERSION = '0.08';
+$WebService::Wikimapia::Langauge::VERSION   = '0.10';
+$WebService::Wikimapia::Langauge::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Language - Placeholder for 'language' of L<WebService::Wi
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 

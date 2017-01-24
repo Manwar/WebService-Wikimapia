@@ -1,6 +1,7 @@
 package WebService::Wikimapia::Photo;
 
-$WebService::Wikimapia::Photo::VERSION = '0.08';
+$WebService::Wikimapia::Photo::VERSION   = '0.10';
+$WebService::Wikimapia::Photo::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
 
@@ -8,7 +9,7 @@ WebService::Wikimapia::Photo - Placeholder for 'photo' of L<WebService::Wikimapi
 
 =head1 VERSION
 
-Version 0.08
+Version 0.10
 
 =cut
 
@@ -30,8 +31,8 @@ has 'time_str'            => (is => 'ro');
 has 'status'              => (is => 'ro');
 has 'full_url'            => (is => 'ro');
 has 'big_url'             => (is => 'ro');
-has '960_url'             => (is => 'ro');
-has '1280_url'            => (is => 'ro');
+has 'url_960'             => (is => 'ro');
+has 'url_1280'            => (is => 'ro');
 has 'thumbnail_url'       => (is => 'ro');
 has 'thumbnaliRetina_url' => (is => 'ro');
 
@@ -61,9 +62,9 @@ has 'thumbnaliRetina_url' => (is => 'ro');
 
 =head2 big_url()
 
-=head2 960_url ()
+=head2 url_960 ()
 
-=head2 1280_url()
+=head2 url_1280()
 
 =head2 thumnail_url()
 

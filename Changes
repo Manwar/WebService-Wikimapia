@@ -1,5 +1,11 @@
 Revision history for WebService::Wikimapia
 
+0.10  Tue Jan 24 12:10:00 2017
+      - Fixed inconsisten versions.
+      - Renamed method 960_url() to url_960() and 1280_url() to url_1280() to fix invalid sub name error.
+        http://www.cpantesters.org/cpan/report/480d32cc-e0d8-11e6-af13-afb6b8e3343c
+      - Added $AUTHORITY to each package in the distribution.
+
 0.09  Sun Jan 22 03:15:00 2017
       - Added LICENSE file.
       - General tidied up Makefile.PL and t/00-load.t scripts.
