@@ -1,6 +1,6 @@
 package WebService::Wikimapia::Comment;
 
-$WebService::Wikimapia::Comment::VERSION   = '0.10';
+$WebService::Wikimapia::Comment::VERSION   = '0.11';
 $WebService::Wikimapia::Comment::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::Comment - Placeholder for 'comment' of L<WebService::Wiki
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 

@@ -1,6 +1,6 @@
 package WebService::Wikimapia::UserAgent;
 
-$WebService::Wikimapia::UserAgent::VERSION   = '0.10';
+$WebService::Wikimapia::UserAgent::VERSION   = '0.11';
 $WebService::Wikimapia::UserAgent::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::UserAgent - Interface to user agent for Wikimapia API.
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 

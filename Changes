@@ -1,5 +1,8 @@
 Revision history for WebService::Wikimapia
 
+0.11  Sun Apr 09 11:20:00 2017
+      - Added key 'provides' to Makefile.PL script.
+
 0.10  Tue Jan 24 12:10:00 2017
       - Fixed inconsisten versions.
       - Renamed method 960_url() to url_960() and 1280_url() to url_1280() to fix invalid sub name error.

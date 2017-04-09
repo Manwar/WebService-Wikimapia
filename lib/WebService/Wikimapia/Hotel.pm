@@ -1,6 +1,6 @@
 package WebService::Wikimapia::Hotel;
 
-$WebService::Wikimapia::Hotel::VERSION   = '0.10';
+$WebService::Wikimapia::Hotel::VERSION   = '0.11';
 $WebService::Wikimapia::Hotel::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::Hotel - Placeholder for 'hotel' of L<WebService::Wikimapi
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 

@@ -1,6 +1,6 @@
 package WebService::Wikimapia::Polygon;
 
-$WebService::Wikimapia::Polygon::VERSION   = '0.10';
+$WebService::Wikimapia::Polygon::VERSION   = '0.11';
 $WebService::Wikimapia::Polygon::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::Polygon - Placeholder for 'polygon' of L<WebService::Wiki
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 

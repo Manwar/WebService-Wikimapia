@@ -1,6 +1,6 @@
 package WebService::Wikimapia::Tag;
 
-$WebService::Wikimapia::Tag::VERSION   = '0.10';
+$WebService::Wikimapia::Tag::VERSION   = '0.11';
 $WebService::Wikimapia::Tag::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::Tag - Placeholder for 'tags' of L<WebService::Wikimapia::
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
