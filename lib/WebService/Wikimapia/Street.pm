@@ -1,6 +1,6 @@
 package WebService::Wikimapia::Street;
 
-$WebService::Wikimapia::Street::VERSION   = '0.11';
+$WebService::Wikimapia::Street::VERSION   = '0.12';
 $WebService::Wikimapia::Street::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ WebService::Wikimapia::Street - Placeholder for 'street' of L<WebService::Wikima
 
 =head1 VERSION
 
-Version 0.11
+Version 0.12
 
 =cut
 

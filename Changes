@@ -1,5 +1,8 @@
 Revision history for WebService::Wikimapia
 
+0.12  Mon Apr 10 19:10:00 2017
+      - Added test scripts (t/meta-json.t and t/meta-yml.t).
+
 0.11  Sun Apr 09 11:20:00 2017
       - Added key 'provides' to Makefile.PL script.
 
